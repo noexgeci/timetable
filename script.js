@@ -12,7 +12,7 @@ window.onload = function() {
     let currentDayElement = document.querySelector(`a[href="${currentDay}.html"]`);
     if (currentDayElement) {
         currentDayElement.style.backgroundColor = "#ffeb3b";
-        currentDayElement.style.color = "#333";
+        currentDayElement.style.color = "#000";
     }
 
     // Az aktuális étel kiválasztása az aktuális időpontra
