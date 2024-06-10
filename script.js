@@ -1,6 +1,6 @@
 window.onload = function() {
-    const days = ["vasarnap", "hetfo", "kedd", "szerda", "csutortok", "pentek", "szombat"];
-    const meals = ["reggeli", "tizorai", "ebed", "uzsonna", "vacsora"];
+    const days = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
+    const meals = ["Reggeli", "Tízórai", "Ebéd", "Uzsonna", "Vacsora"];
     const now = new Date();
     const currentDay = days[now.getDay()];
     const currentHour = now.getHours();
@@ -48,7 +48,7 @@ window.onload = function() {
         const nextMeal = meals[nextMealIndex];
 
         const dayTitle = document.getElementById("dayTitle");
-        dayTitle.innerText = `Ma ${currentDay.charAt(0).toUpperCase() + currentDay.slice(1)} - ${nextMeal} következik`;
+        dayTitle.innerText = `${nextMeal} következik`;
 
         const nextMealTime = (nextMealIndex + 1) * 6 - currentHour - 1; // Mert 0-tól indul az index
         const nextMealMinutes = (nextMealTime * 60 - currentMinute) - 1; // Mert 0-tól indul az index
